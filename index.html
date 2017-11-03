@@ -1,0 +1,423 @@
+<!Doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <title></title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <link href="./css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <link href="./css/slick.css" rel="stylesheet" type="text/css" />
+    <link href="./css/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="./css/style_sp.css" rel="stylesheet" type="text/css" />
+    <link href="./css/responsive.css" rel="stylesheet" type="text/css" />
+    <script src="./js/jquery.js" type="text/javascript"></script>
+    <script src="./js/slick.js" type="text/javascript"></script>
+    <script src="./js/jquery.scroll.js" type="text/javascript"></script>
+    <script src="./js/common.js" type="text/javascript"></script>
+    <script src="./js/top.js" type="text/javascript"></script>
+    <!-- Google Analytics start -->
+    <!-- Google Analytics end -->
+</head>
+
+<body id="index">
+    <div id="wrapper">
+        <div id="header" class="clearfix">
+            <div class="inner clearfix">
+                <div class="container_left">
+                    <p class="logo_single">
+                        <a href="#">
+                          <span class="line_01"></span>
+                          <span class="line_02"></span>
+                        </a>
+                    </p>
+                    <form action="#" id="form_header">
+                        <ul>
+                            <li class="active">コート</li>
+                            <li>レッスン</li>
+                        </ul>
+                        <input type="text" placeholder="コート または レッスンを選択">
+                    </form>
+                </div>
+                <!-- end .container_left -->
+                <div class="container_right">
+                    <p class="btn_signin">ログイン</p>
+                    <p class="btn_star"><i class="fa fa-star" aria-hidden="true"></i></p>
+                    <p class="btn_letter">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <span class="line_01"></span>
+                        <span class="line_02"></span>
+                        <span class="line_03"></span>
+                    </p>
+                </div>
+                <!-- end .container_right -->
+            </div>
+            <!-- end .inner -->
+        </div>
+        <!-- end #header -->
+        <div id="main" class="clearfix">
+            <div id="top_info">
+                <div class="inner clearfix">
+                    <h2>テニス<span>の</span>オンライン予約</h2>
+                    <p class="desc">レンタルコート・レッスンが簡単にできる。<br>ボタン1つでカンタン予約！テニスコ</p>
+                    <form action="#" id="form_topinfo">
+                        <input type="text" placeholder="例）渋谷、横浜駅">
+                        <button class="button_01">コート<span>を探す</span></button>
+                        <button class="button_02">レッスン<span>を探す</span></button>
+                    </form>
+                </div>
+            </div>
+            <!-- end .top_info -->
+            <div id="popular_search">
+                <div class="inner clearfix">
+                    <h3>人気の検索</h3>
+                    <div class="box_tab">
+                        <ul class="title">
+                            <li class="court active">コート</li>
+                            <li class="lession">レッスン</li>
+                        </ul>
+                        <div class="tab_content" id="tab_court">
+                            <dl class="list_places">
+                                <dt class="icon_marker"><i class="fa fa-map-marker" aria-hidden="true"></i></dt>
+                                <dd>
+                                    <p>東京</p>
+                                    <p>神奈川</p>
+                                    <p>千葉</p>
+                                    <p>埼玉</p>
+                                </dd>
+                            </dl>
+                            <!-- end .list_places -->
+                            <div class="box_items">
+                                <div class="item">
+                                    <p class="cnt">
+                                        <span><img src="images/popular_icon01.png" width="40" alt="駅近"></span>
+                                    </p>
+                                    <p class="ttl">駅近</p>
+                                </div>
+                                <!-- end .item -->
+                                <div class="item">
+                                    <p class="cnt">
+                                        <span><img src="images/popular_icon02.png" width="50" alt="無料駐車場"></span>
+                                    </p>
+                                    <p class="ttl">無料駐車場</p>
+                                </div>
+                                <!-- end .item -->
+                                <div class="item">
+                                    <p class="cnt">
+                                        <span><img src="images/popular_icon03.png" width="45" alt="インドア"></span>
+                                    </p>
+                                    <p class="ttl">インドア</p>
+                                </div>
+                                <!-- end .item -->
+                                <div class="item">
+                                    <p class="cnt">
+                                        <span><img src="images/popular_icon04.png" width="49" alt="アウトドア"></span>
+                                    </p>
+                                    <p class="ttl">アウトドア</p>
+                                </div>
+                                <!-- end .item -->
+                                <div class="item">
+                                    <p class="cnt">
+                                        <span><img src="images/popular_icon05.png" width="45" alt="キッズルーム"></span>
+                                    </p>
+                                    <p class="ttl">キッズルーム</p>
+                                </div>
+                                <!-- end .item -->
+                                <div class="item">
+                                    <p class="cnt">
+                                        <span class="txt">サーフェス</span>
+                                        <span><img src="images/popular_icon06.png" width="32" alt="ハード"></span>
+                                    </p>
+                                    <p class="ttl">ハード</p>
+                                </div>
+                                <!-- end .item -->
+                                <div class="item">
+                                    <p class="cnt">
+                                        <span class="txt">サーフェス</span>
+                                        <span><img src="images/popular_icon07.png" width="38" alt="オムニ"></span>
+                                    </p>
+                                    <p class="ttl">オムニ</p>
+                                </div>
+                                <!-- end .item -->
+                                <div class="item">
+                                    <p class="cnt">
+                                        <span class="txt">サーフェス</span>
+                                        <span><img src="images/popular_icon08.png" width="41" alt="クレイ"></span>
+                                    </p>
+                                    <p class="ttl">クレイ</p>
+                                </div>
+                                <!-- end .item -->
+                                <div class="item">
+                                    <p class="cnt">
+                                        <span class="txt">サーフェス</span>
+                                        <span><img src="images/popular_icon09.png" width="58" alt="カーペット"></span>
+                                    </p>
+                                    <p class="ttl">カーペット</p>
+                                </div>
+                                <!-- end .item -->
+                                <div class="item">
+                                    <p class="cnt">
+                                        <span class="txt">サーフェス</span>
+                                        <span><img src="images/popular_icon10.png" width="33" alt="グラス"></span>
+                                    </p>
+                                    <p class="ttl">グラス</p>
+                                </div>
+                                <!-- end .item -->
+                            </div>
+                            <!-- end .box_items -->
+                        </div>
+                        <!-- end #tab_court -->
+                    </div>
+                </div>
+            </div>
+            <!-- end #popular_search -->
+            <div id="can_do_soon">
+                <div class="inner clearfix">
+                    <div class="row_ttl clearfix">
+                        <h3>すぐできる</h3>
+                        <p class="box_button"><a href="#">すべてを見る ></a></p>
+                    </div>
+                    <div id="candosoon_slider" class="content clearfix">
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img01.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img02.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_02">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img03.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img04.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img01.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img02.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_02">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img03.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img04.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                    </div>
+                    <!-- end .content -->
+                </div>
+                <!-- end .inner -->
+            </div>
+            <!-- end .can_do_soon -->
+            <div id="campaign">
+                <div class="inner clearfix">
+                    <div class="row_ttl clearfix">
+                        <h3>キャンペーン中</h3>
+                        <p class="box_button"><a href="#">すべてを見る ></a></p>
+                    </div>
+                    <div id="campaign_slider" class="content clearfix">
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img01.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img02.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_02">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img03.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img04.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img01.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img02.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_02">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img03.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post post_cat_01">
+                            <p class="post_img"><a href="#"><img src="images/candosoon_img04.png" width="310" alt="10/12 (水) 18:00-20:00 2面"></a></p>
+                            <p class="post_cat">コート</p>
+                            <p class="post_ttl">10/12 (水) 18:00-20:00 2面</p>
+                            <p class="post_desc">ハード、クレイ各1面 / 二子玉川駅238m / 多摩川テニスクラブ / 1時間あたり ¥3,300</p>
+                        </div>
+                        <!-- end .item -->
+                    </div>
+                    <!-- end .content -->
+                </div>
+                <!-- end .inner -->
+            </div>
+            <!-- end #campaign -->
+            <div id="feature">
+                <div class="inner clearfix">
+                    <div class="row_ttl clearfix">
+                        <h3>特集</h3>
+                        <p class="box_button"><a href="#">すべてを見る ></a></p>
+                    </div>
+                    <div id="feature_slider" class="content clearfix">
+                        <div class="post">
+                            <p class="post_img"><a href="#"><img src="images/feature_img01.png" width="420" alt="12/24(木)錦織圭選手イベント"></a></p>
+                            <p class="post_ttl">12/24(木)錦織圭選手イベント</p>
+                            <p class="post_time">Update: <span>2017/12/1</span></p>
+                            <p class="post_desc">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま...</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post">
+                            <p class="post_img"><a href="#"><img src="images/feature_img02.png" width="420" alt="12/24(木)錦織圭選手イベント"></a></p>
+                            <p class="post_ttl">12/24(木)錦織圭選手イベント</p>
+                            <p class="post_time">Update: <span>2017/12/1</span></p>
+                            <p class="post_desc">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま...</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post">
+                            <p class="post_img"><a href="#"><img src="images/feature_img01.png" width="420" alt="12/24(木)錦織圭選手イベント"></a></p>
+                            <p class="post_ttl">12/24(木)錦織圭選手イベント</p>
+                            <p class="post_time">Update: <span>2017/12/1</span></p>
+                            <p class="post_desc">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま...</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post">
+                            <p class="post_img"><a href="#"><img src="images/feature_img02.png" width="420" alt="12/24(木)錦織圭選手イベント"></a></p>
+                            <p class="post_ttl">12/24(木)錦織圭選手イベント</p>
+                            <p class="post_time">Update: <span>2017/12/1</span></p>
+                            <p class="post_desc">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま...</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post">
+                            <p class="post_img"><a href="#"><img src="images/feature_img01.png" width="420" alt="12/24(木)錦織圭選手イベント"></a></p>
+                            <p class="post_ttl">12/24(木)錦織圭選手イベント</p>
+                            <p class="post_time">Update: <span>2017/12/1</span></p>
+                            <p class="post_desc">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま...</p>
+                        </div>
+                        <!-- end .item -->
+                        <div class="post">
+                            <p class="post_img"><a href="#"><img src="images/feature_img02.png" width="420" alt="12/24(木)錦織圭選手イベント"></a></p>
+                            <p class="post_ttl">12/24(木)錦織圭選手イベント</p>
+                            <p class="post_time">Update: <span>2017/12/1</span></p>
+                            <p class="post_desc">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入りま...</p>
+                        </div>
+                        <!-- end .item -->
+                    </div>
+                    <!-- end .content -->
+                </div>
+                <!-- end .inner -->
+            </div>
+            <!-- end #feature -->
+        </div>
+        <!-- end #main -->
+        <div id="footer">
+            <div id="f_block01">
+                <div class="inner clearfix">
+                    <div class="container_left">
+                        <div class="content">
+                            <p class="logo"><a href="#"><img src="images/logo_78x46.png" width="78" alt="tenice"></a></p>
+                            <ul>
+                                <li class="icon_facebook"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li class="icon_twitter"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                <li class="icon_instagram"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- end .container_left -->
+                    <div class="container_right">
+                        <ul>
+                            <li><a href="#">ログイン・会員登録</a></li>
+                            <li><a href="#">お問い合わせ</a></li>
+                            <li><a href="#">テニス施設オーナー様へ</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">レンタルコート検索</a></li>
+                            <li><a href="#">レッスン検索</a></li>
+                            <li><a href="#">特集</a></li>
+                        </ul>
+                    </div>
+                    <!-- end .container_right -->
+                </div>
+                <!-- end .inner -->
+            </div>
+            <!-- end #f_block01 -->
+            <div id="f_block02">
+                <div class="inner clearfix">
+                    <address>&copy; Groovoost Inc.</address>
+                    <ul>
+                        <li><a href="#">利用規約</a></li>
+                        <li><a href="#">プライバシーポリシー</a></li>
+                        <li><a href="#">運営会社</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end #f_block02 -->
+        </div>
+        <!-- end #header -->
+    </div>
+    <script type="text/javascript" src="./js/gmaps.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=ここにAPIキー&callback=gmaps.renderAll"></script>
+</body>
+
+</html>
