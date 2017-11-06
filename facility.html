@@ -13,10 +13,13 @@
     <link href="./css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="./css/slick.css" rel="stylesheet" type="text/css" />
     <link href="./css/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="./css/lightbox.css" rel="stylesheet" type="text/css" />
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
     <link href="./css/responsive.css" rel="stylesheet" type="text/css" />
     <script src="./js/jquery.js" type="text/javascript"></script>
     <script src="./js/slick.js" type="text/javascript"></script>
+    <script src="./js/lightbox.js" type="text/javascript"></script>
+    <script src="./js/theia-sticky-sidebar.js" type="text/javascript"></script>
     <script src="./js/jquery.scroll.js" type="text/javascript"></script>
     <script src="./js/common.js" type="text/javascript"></script>
     <!-- Google Analytics start -->
@@ -25,7 +28,7 @@
 
 <body id="page-facility">
     <div id="wrapper">
-        <div id="header" class="clearfix">
+        <div id="header" class="clearfix menu_white">
             <div class="inner clearfix">
                 <div class="container_left">
                     <h1>
@@ -69,13 +72,428 @@
         <div id="main" class="clearfix">
             <div id="content" class="clearfix">
                 <div id="top_info">
-                    <div class="inner clearfix">
-                    </div>
+                    <ul>
+                        <li><a href="images/facility_visual01.jpg" data-lightbox="image-1" data-title="My caption 1"><img src="images/facility_visual01.jpg" alt=""></a></li>
+                        <li><a href="images/top_visual_01.jpg" data-lightbox="image-1" data-title="My caption 2"><img src="images/top_visual_01.jpg" alt=""></a></li>
+                        <li><a href="images/facility_visual01.jpg" data-lightbox="image-1" data-title="My caption 3"><img src="images/facility_visual01.jpg" alt=""></a></li>
+                        <li><a href="images/top_visual_01.jpg" data-lightbox="image-1" data-title="My caption 4"><img src="images/top_visual_01.jpg" alt=""></a></li>
+                    </ul>
                 </div>
                 <!-- end #top_info -->
-                <div id="block_01">
-                    <div class="inner clearfix">
+                <div id="facility_block01">
+                    <div class="inner clearfix theiaStickySidebar">
                         <div id="content_left">
+                            <div class="breadcrumbs">
+                                <div class="inner clearfix">
+                                    <ul>
+                                        <li><a href="#">レンタルコート</a>・</li>
+                                        <li>レッスン</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end .breadcrumbs -->
+                            <div id="rental_coat">
+                                <h3>レンタルコート</h3>
+                                <ul class="types">
+                                    <li>ハード</li>
+                                    <li class="active">オムニ</li>
+                                    <li class="active">クレイ</li>
+                                    <li>カーペット</li>
+                                    <li class="active">グラス</li>
+                                </ul>
+                                <div class="book_info clearfix">
+                                    <ul class="date">
+                                        <li>10<span>:00</span>
+                                            <br>&nbsp;~18<span>:00</span></li>
+                                        <li>18<span>:00</span>
+                                            <br>&nbsp;~22<span>:00</span></li>
+                                    </ul>
+                                    <div class="detail">
+                                        <div class="content">
+                                            <ul>
+                                                <li class="ttl"><span>10/</span>30 月</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">31 火</li>
+                                                <li><span>△</span>¥10,000</li>
+                                                <li><span>△</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl"><span>11/</span>1 水</li>
+                                                <li><span>△</span>¥10,000</li>
+                                                <li><span>△</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">2 木</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">3 金</li>
+                                                <li><span>×</span>¥10,000</li>
+                                                <li><span>×</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">4 土</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">5 日</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">6 月</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">7 火</li>
+                                                <li>¥10,000</li>
+                                                <li>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">8 水</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">9 木</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">9 木</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">9 木</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                            </ul>
+                                            <ul>
+                                                <li class="ttl">9 木</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                                <li><span>◯</span>¥10,000</li>
+                                            </ul>
+                                        </div>
+                                        <div class="popup">
+                                            <div class="content_popup">
+                                                <div class="btn_close"></div>
+                                                <div class="inner_content clearfix">
+                                                    <p class="ttl_01">11/1 (水) 10:00~18:00</p>
+                                                    <p class="txt_01">この時間帯のレンタルコート料金を表示しています。</p>
+                                                    <ul class="times">
+                                                        <li>9<span>:00</span></li>
+                                                        <li>10<span>:00</span></li>
+                                                        <li>11<span>:00</span></li>
+                                                        <li>12<span>:00</span></li>
+                                                        <li>13<span>:00</span></li>
+                                                        <li>14<span>:00</span></li>
+                                                        <li>15<span>:00</span></li>
+                                                        <li>16<span>:00</span></li>
+                                                        <li>17<span>:00</span></li>
+                                                        <li>18<span>:00</span></li>
+                                                        <li>19<span>:00</span></li>
+                                                        <li>20<span>:00</span></li>
+                                                        <li>21<span>:00</span></li>
+                                                        <li>22<span>:00</span></li>
+                                                        <li>23<span>:00</span></li>
+                                                    </ul>
+                                                    <div class="picks">
+                                                        <ul class="title">
+                                                            <li>ハード
+                                                                <br>1</li>
+                                                            <li>ハード
+                                                                <br>2</li>
+                                                            <li>オムニ
+                                                                <br>1</li>
+                                                            <li>オムニ
+                                                                <br>2
+                                                                <br>(室内)</li>
+                                                            <li>カーペ
+                                                                <br>ット1
+                                                                <br>(室内)</li>
+                                                            <li>カーペ
+                                                                <br>ット2</li>
+                                                            <li>グラス
+                                                                <br>1</li>
+                                                            <li>グラス
+                                                                <br>2</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                        <ul class="item">
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                            <li>¥ 12,000</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end .book_info -->
+                            </div>
+                            <!-- end #rental_coat -->
+                            <div id="lession" class="clearfix">
+                                <h3>レッスン</h3>
+                                <div class="content">
+                                    <div class="post">
+                                        <p class="post_ttl">入門 ¥ 21,600</p>
+                                        <p class="post_img">
+                                            <span class="txt">Entry<br>Lesson</span>
+                                            <span class="img"><img src="images/lession_img01.png" alt=""></span>
+                                        </p>
+                                        <div class="post_text">
+                                            <p class="desc">元プロがコーチ！絶対上達して公式戦に勝ちたい人必見の初心者・初級レッスンができるますよおおお</p>
+                                            <p class="info">60分 月4回 火19:30~</p>
+                                        </div>
+                                    </div>
+                                    <!-- end .post -->
+                                    <div class="post">
+                                        <p class="post_ttl">初級 ¥ 21,600</p>
+                                        <p class="post_img">
+                                            <span class="txt">Elementary<br>Lesson</span>
+                                            <span class="img"></span>
+                                        </p>
+                                        <div class="post_text">
+                                            <p class="info">60分 月4回 火19:30~</p>
+                                        </div>
+                                    </div>
+                                    <!-- end .post -->
+                                    <div class="post">
+                                        <p class="post_ttl">初中級 ¥ 21,600</p>
+                                        <p class="post_img">
+                                            <span class="txt">First intermediate<br>Lesson</span>
+                                            <span class="img"></span>
+                                        </p>
+                                        <div class="post_text">
+                                            <p class="desc">元プロがコーチ！絶対上達して公式戦に勝ちたい人必見の初心者・初級レッスンができるますよおおお</p>
+                                            <p class="info">60分 月4回 火19:30~</p>
+                                        </div>
+                                    </div>
+                                    <!-- end .post -->
+                                    <div class="post">
+                                        <p class="post_ttl">入門 ¥ 21,600</p>
+                                        <p class="post_img">
+                                            <span class="txt">Entry<br>Lesson</span>
+                                            <span class="img"><img src="images/lession_img01.png" alt=""></span>
+                                        </p>
+                                        <div class="post_text">
+                                            <p class="desc">元プロがコーチ！絶対上達して公式戦に勝ちたい人必見の初心者・初級レッスンができるますよおおお</p>
+                                            <p class="info">60分 月4回 火19:30~</p>
+                                        </div>
+                                    </div>
+                                    <!-- end .post -->
+                                    <div class="post">
+                                        <p class="post_ttl">初級 ¥ 21,600</p>
+                                        <p class="post_img">
+                                            <span class="txt">Elementary<br>Lesson</span>
+                                            <span class="img"></span>
+                                        </p>
+                                        <div class="post_text">
+                                            <p class="info">60分 月4回 火19:30~</p>
+                                        </div>
+                                    </div>
+                                    <!-- end .post -->
+                                    <div class="post">
+                                        <p class="post_ttl">初中級 ¥ 21,600</p>
+                                        <p class="post_img">
+                                            <span class="txt">First intermediate<br>Lesson</span>
+                                            <span class="img"></span>
+                                        </p>
+                                        <div class="post_text">
+                                            <p class="desc">元プロがコーチ！絶対上達して公式戦に勝ちたい人必見の初心者・初級レッスンができるますよおおお</p>
+                                            <p class="info">60分 月4回 火19:30~</p>
+                                        </div>
+                                    </div>
+                                    <!-- end .post -->
+                                </div>
+                                <!-- end .content -->
+                                <div class="popup">
+                                    <div class="content_popup">
+                                        <div class="btn_close"></div>
+                                        <div class="inner_content">
+                                            <p class="title">入門 ¥21,600</p>
+                                            <p class="desc">元プロがコーチ！絶対上達して公式戦に勝ちたい人必見の初心者・初級レッスンがついに都内に登場！</p>
+                                            <p class="img_01"><img src="images/lession_img02.png" alt=""></p>
+                                            <p class="txt_01">基本を身につけ、やさしいラリーと簡単なゲームの進め方を覚えます。テニスの基本を教わりたい方、ラリーがつながる様になりたい方にお勧めのクラスです。最大定員8名（コーチ1名）もしくは12名（コーチ2名</p>
+                                            <div class="info_01">
+                                                <dl>
+                                                    <dt>開催日</dt>
+                                                    <dd>水曜 17:30 〜 19:00</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>料金</dt>
+                                                    <dd><span class="txt_bold">¥21,600</span> /月 (月極)　体験: <span class="txt_bold">¥2,000</span></dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>入会金</dt>
+                                                    <dd><span class="txt_line_through"><span class="txt_bold">¥ 5,400</span> / 月</span>
+                                                        <br><span class="red_color txt_bold">¥1,000のキャンペーン中！</span></dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>場所</dt>
+                                                    <dd>大井埠頭中央公園Bコート</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>レッスンの方針</dt>
+                                                    <dd>和気あいあいと楽しく</dd>
+                                                </dl>
+                                                <dl>
+                                                    <dt>サーフェス</dt>
+                                                    <dd>ハード、オムニのどちらか</dd>
+                                                </dl>
+                                            </div>
+                                            <p class="ttl_02">担当コーチ: 島崎渉
+                                                <br><span class="small">(元プロ / コーチ歴 12年)</span></p>
+                                            <p class="img_02"><img src="images/lession_img03.png" alt=""></p>
+                                            <p class="txt_02">自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。自己紹介文がここに入ります。</p>
+                                            <p class="btn"><a href="#">このレッスンに体験レッスンを申し込む</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end #lession -->
                         </div>
                         <!-- end #content_left -->
                         <div id="content_right">
@@ -88,7 +506,13 @@
                                 <li><span class="icon"><img src="images/facility_icon04_15x15.png" width="15" alt=""></span>水</li>
                                 <li><span class="icon"><img src="images/facility_icon05_30x15.png" width="30" alt=""></span>有</li>
                             </ul>
-                            <div class="map_01"><img style="max-width: 100%" src="images/facility_map01.png" alt=""></div>
+                            <div class="map_01">
+                                <div class="gMap gMapZoom15" style="width:100%; height: 250px;">
+                                    <div class="gMapCenter">
+                                        <p class="gMapLatLng">35.68531520120308,139.5674442306885</p>
+                                    </div>
+                                </div>
+                            </div>
                             <ul class="info_02">
                                 <li>
                                     <span class="icon"><img src="images/facility_icon06_15x15.png" width="15" alt=""></span>
@@ -166,7 +590,17 @@
         <!-- end #header -->
     </div>
     <script type="text/javascript" src="./js/gmaps.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=ここにAPIキー&callback=gmaps.renderAll"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3KMv5AsjLFfgSPpGc8bUK23Ccx8ohdRY&callback=gmaps.renderAll"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#page-facility #content_right')
+            .theiaStickySidebar({
+                additionalMarginTop: 52
+            });
+
+        $('#rental_coat .popup .picks .item li').click(function() { $(this).toggleClass('selected'); });
+    });
+    </script>
 </body>
 
 </html>

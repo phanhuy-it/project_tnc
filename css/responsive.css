@@ -11,6 +11,7 @@
 
 
 
+
 /*responsive */
 
 @media screen and (min-width: 1025px) {
@@ -124,6 +125,13 @@
         margin-left: 5px;
         font-size: 12px;
     }
+    #page-facility #content_left {
+        width: 62%;
+    }
+    #page-facility #content_right {
+        width: 35%;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -202,6 +210,31 @@
     #f_block01 .container_right {
         width: 70%;
     }
+    #page-facility #content_left {
+        width: 100%;
+        float: none;
+        margin: 0 0 30px;
+        padding-bottom: 0px;
+    }
+    #page-facility #content_right {
+        width: 100%;
+        float: none;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+    #page-facility #top_info {
+        height: 300px;
+    }
+    #page-facility #top_info ul {
+        height: 300px;
+    }
+    #page-search-court-map #map .controls {
+        left: 10px;
+    }
+    #page-search-court-map #map .button_01 {
+        left: 10px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -220,6 +253,9 @@
     #campaign_slider button.slick-prev,
     #feature_slider button.slick-prev {
         left: -10px;
+    }
+    #lession .content .post {
+        margin: 0 5px;
     }
 }
 
@@ -240,16 +276,34 @@
     #f_block01 .container_right ul {
         margin: 0 5% !important;
     }
+    #can_do_soon .post .post_ttl,
+    #campaign .post .post_ttl {
+        font-size: 16px;
+    }
+    #feature .post .post_ttl {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .breadcrumbs ul li {
+        font-size: 12px;
+    }
 }
 
-@media screen and (max-width: 490px) {}
+@media screen and (max-width: 490px) {
+    #form_topinfo button {
+        width: calc((100% - 10px) / 2);
+    }
+    #form_topinfo .button_01 {
+        margin-right: 10px;
+    }
+}
 
 @media screen and (max-width: 420px) {
     #can_do_soon h3,
     #campaign h3,
     #feature h3,
     #popular_search h3 {
-        font-size: 28px;
+        font-size: 26px;
     }
     #feature .post .post_ttl {
         font-size: 22px;
@@ -271,9 +325,9 @@
         order: 0;
         margin: 0 0 5px;
     }
-}
-
-@media screen and (max-width: 360px) {
+    #lession .content {
+        width: calc(100% - 30px);
+    }
     #form_header ul li {
         font-size: 10px;
         margin: 0 3px;
@@ -290,6 +344,21 @@
     }
     #f_block01 .container_right ul a {
         font-size: 12px;
+    }
+    #page-search-court-list #posts_container .post .info_02 .details ul .ttl {
+        font-size: 12px;
+    }
+    #request_setting .content {
+        padding: 20px 10px;
+    }
+    #request_setting .content .list_surface li {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #rental_coat .types li {
+        font-size: 10px;
     }
 }
 
