@@ -9,9 +9,122 @@
 }
 
 
+
+
 /*responsive */
 
+@media screen and (min-width: 1025px) {
+    #menu_icon {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 769px) {}
+
+@media screen and (max-width: 1024px) {
+    #header {
+        padding: 5px 0;
+    }
+    #header .inner {
+        padding: 0 5px 0 10px;
+    }
+    #header .container_right {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 2px);
+        background: #ffffff;
+        width: 250px;
+        display: flex;
+        padding: 5px;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+    }
+    #header .container_right.open {
+        opacity: 1;
+        visibility: visible;
+    }
+    #menu-toggle {
+        float: right;
+        display: inline-block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: #FFFFFF;
+        cursor: pointer;
+        border-radius: 3px;
+        margin-top: 2px;
+    }
+    #menu-toggle .bar {
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        background: #feda31;
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+    #menu-toggle .bar:nth-child(1) {
+        left: 5px;
+        top: 7px;
+    }
+    #menu-toggle .bar:nth-child(2) {
+        left: 5px;
+        top: 18px;
+    }
+    #menu-toggle .bar:nth-child(2):after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 30px;
+        height: 5px;
+        background: #feda31;
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+    #menu-toggle .bar:nth-child(3) {
+        right: 5px;
+        top: 29px;
+    }
+    #menu-toggle.active .bar:nth-child(1),
+    #menu-toggle.active .bar:nth-child(3) {
+        width: 0;
+    }
+    #menu-toggle.active .bar:nth-child(2) {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    #menu-toggle.active .bar:nth-child(2):after {
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+    .logo_single {
+        margin-right: 0;
+    }
+    #header .container_left {
+        width: calc(100% - 45px);
+        height: 45px;
+    }
+    #form_header {
+        width: calc(100% - 25px);
+        justify-content: flex-end;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #form_header ul li {
+        margin: 0 5px;
+    }
+    #form_header input {
+        max-width: 60%;
+        height: 40px;
+        margin-left: 5px;
+        font-size: 12px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     img {
@@ -37,16 +150,147 @@
         display: none;
     }
     /*---*/
+    #top_info h2 {
+        font-size: 8vw;
+    }
+    #top_info .desc {
+        font-size: 3.5vw;
+    }
+    #form_topinfo button {
+        width: calc((100% - 20px) / 2);
+    }
+    #popular_search {
+        padding: 30px 0;
+    }
+    #popular_search h3 {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+    #popular_search .box_tab .title {
+        margin-bottom: 15px;
+    }
+    #popular_search .box_tab .title li {
+        font-size: 18px;
+    }
+    #popular_search .box_tab .list_places {
+        margin-bottom: 5px;
+    }
+    #popular_search .box_tab .list_places dd p {
+        font-size: 14px;
+    }
+    #can_do_soon,
+    #campaign,
+    #feature {
+        padding: 30px 0;
+    }
+    #can_do_soon h3,
+    #campaign h3,
+    #feature h3 {
+        font-size: 35px;
+        width: 65%;
+    }
+    #can_do_soon .row_ttl,
+    #campaign .row_ttl {
+        margin-bottom: 10px;
+    }
+    #can_do_soon .box_button,
+    #campaign .box_button,
+    #feature .box_button {
+        font-size: 14px;
+        width: 35%;
+    }
+    #f_block01 .container_right {
+        width: 70%;
+    }
 }
 
-@media screen and (min-width: 100px) and (max-width: 800px) {}
+@media screen and (max-width: 640px) {
+    #candosoon_slider button,
+    #campaign_slider button,
+    #feature_slider button {
+        width: 40px;
+        height: 40px;
+    }
+    #candosoon_slider button.slick-next,
+    #campaign_slider button.slick-next,
+    #feature_slider button.slick-next {
+        right: -10px;
+    }
+    #candosoon_slider button.slick-prev,
+    #campaign_slider button.slick-prev,
+    #feature_slider button.slick-prev {
+        left: -10px;
+    }
+}
 
-@media screen and (max-width: 640px) {}
-
-@media screen and (max-width: 560px) {}
+@media screen and (max-width: 560px) {
+    #f_block01 .container_left {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px;
+        display: flex;
+        justify-content: center;
+    }
+    #f_block01 .container_right {
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #f_block01 .container_right ul {
+        margin: 0 5% !important;
+    }
+}
 
 @media screen and (max-width: 490px) {}
 
-@media screen and (max-width: 320px) {}
+@media screen and (max-width: 420px) {
+    #can_do_soon h3,
+    #campaign h3,
+    #feature h3,
+    #popular_search h3 {
+        font-size: 28px;
+    }
+    #feature .post .post_ttl {
+        font-size: 22px;
+        margin-bottom: 5px;
+    }
+    #f_block02 .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #f_block02 address {
+        float: none;
+        margin: 0 0;
+        order: 1;
+    }
+    #f_block02 ul {
+        float: none;
+        order: 0;
+        margin: 0 0 5px;
+    }
+}
 
-@media screen and (max-width: 240px) {}
+@media screen and (max-width: 360px) {
+    #form_header ul li {
+        font-size: 10px;
+        margin: 0 3px;
+    }
+    #form_header input {
+        font-size: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    #form_topinfo button {
+        font-size: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #f_block01 .container_right ul a {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 320px) {}
