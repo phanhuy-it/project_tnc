@@ -18,6 +18,7 @@
     #menu_icon {
         display: none;
     }
+    
 }
 
 @media screen and (min-width: 769px) {}
@@ -235,6 +236,9 @@
     #page-search-court-map #map .button_01 {
         left: 10px;
     }
+    #popular_search .box_tab {
+        min-height: 200px;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -256,6 +260,11 @@
     }
     #lession .content .post {
         margin: 0 5px;
+    }
+    .court_item.item02 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -359,6 +368,12 @@
 @media screen and (max-width: 360px) {
     #rental_coat .types li {
         font-size: 10px;
+    }
+    #popular_search .box_tab .list_places dd p {
+        margin: 0 10px;
+    }
+    #popular_search .box_tab .list_places dd p:before {
+        right: -10px;
     }
 }
 

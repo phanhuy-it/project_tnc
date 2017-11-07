@@ -13,13 +13,16 @@
     <link href="./css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="./css/slick.css" rel="stylesheet" type="text/css" />
     <link href="./css/slick-theme.css" rel="stylesheet" type="text/css" />
-    <link href="./css/lightbox.css" rel="stylesheet" type="text/css" />
+    <link href="./css/lightgallery.css" rel="stylesheet" type="text/css" />
+    <link href="./css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
     <link href="./css/responsive.css" rel="stylesheet" type="text/css" />
     <script src="./js/jquery.js" type="text/javascript"></script>
     <script src="./js/slick.js" type="text/javascript"></script>
-    <script src="./js/lightbox.js" type="text/javascript"></script>
+    <script src="./js/lightgallery.js" type="text/javascript"></script>
+    <script src="./js/lg-thumbnail.js" type="text/javascript"></script>
     <script src="./js/theia-sticky-sidebar.js" type="text/javascript"></script>
+    <script src="./js/jquery.mCustomScrollbar.min.js" type="text/javascript"></script>
     <script src="./js/jquery.scroll.js" type="text/javascript"></script>
     <script src="./js/common.js" type="text/javascript"></script>
     <!-- Google Analytics start -->
@@ -32,7 +35,7 @@
             <div class="inner clearfix">
                 <div class="container_left">
                     <h1>
-                        <a class="logo_single" href="#">
+                        <a class="logo_single" href="./index.html">
                           <span class="line_01"></span>
                           <span class="line_02"></span>
                         </a>
@@ -72,12 +75,12 @@
         <div id="main" class="clearfix">
             <div id="content" class="clearfix">
                 <div id="top_info">
-                    <ul>
-                        <li><a href="images/facility_visual01.jpg" data-lightbox="image-1" data-title="My caption 1"><img src="images/facility_visual01.jpg" alt=""></a></li>
-                        <li><a href="images/top_visual_01.jpg" data-lightbox="image-1" data-title="My caption 2"><img src="images/top_visual_01.jpg" alt=""></a></li>
-                        <li><a href="images/facility_visual01.jpg" data-lightbox="image-1" data-title="My caption 3"><img src="images/facility_visual01.jpg" alt=""></a></li>
-                        <li><a href="images/top_visual_01.jpg" data-lightbox="image-1" data-title="My caption 4"><img src="images/top_visual_01.jpg" alt=""></a></li>
-                    </ul>
+                    <div id="lightgallery">
+                        <a href="images/facility_visual01.jpg" data-sub-html="<h4>Fading Light 1</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>"><img src="images/facility_visual01.jpg" alt=""></a>
+                        <a href="images/top_visual_01.jpg" data-sub-html="<h4>Fading Light 2</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>"><img src="images/top_visual_01.jpg" alt=""></a>
+                        <a href="images/facility_visual01.jpg" data-sub-html="<h4>Fading Light 3</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>"><img src="images/facility_visual01.jpg" alt=""></a>
+                        <a href="images/top_visual_01.jpg" data-sub-html="<h4>Fading Light 4</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>"><img src="images/top_visual_01.jpg" alt=""></a>
+                    </div>
                 </div>
                 <!-- end #top_info -->
                 <div id="facility_block01">
@@ -181,6 +184,14 @@
                                                 <li><span>◯</span>¥10,000</li>
                                             </ul>
                                         </div>
+                                        <script type="text/javascript">
+                                            $(window).on("load",function(){
+                                                $("#rental_coat .book_info .detail").mCustomScrollbar({
+                                                    axis:"x",
+                                                    scrollbarPosition: "inside"
+                                                });
+                                            });
+                                        </script>
                                         <div class="popup">
                                             <div class="content_popup">
                                                 <div class="btn_close"></div>
@@ -599,6 +610,8 @@
             });
 
         $('#rental_coat .popup .picks .item li').click(function() { $(this).toggleClass('selected'); });
+
+        $("#lightgallery").lightGallery(); 
     });
     </script>
 </body>
