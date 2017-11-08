@@ -12,13 +12,111 @@
 
 
 
+
 /*responsive */
 
 @media screen and (min-width: 1025px) {
     #menu_icon {
         display: none;
     }
-    
+
+
+    #form_topinfo button:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    #f_block01 .container_left .content ul li.icon_facebook a:hover {
+        color: #3A559F;
+    }
+    #f_block01 .container_left .content ul li.icon_twitter a:hover {
+        color: #2AAAE0;
+    }
+    #f_block01 .container_left .content ul li.icon_instagram a:hover {
+        color: #94319E;
+    }
+
+
+    #f_block01 .container_right ul a:hover {
+        text-decoration: underline;
+    }
+
+    #f_block02 ul li a:hover {
+        text-decoration: underline;
+    }
+
+
+    #popular_search .title_tab li:hover {
+        font-weight: 500;
+    }
+    #popular_search .box_tab .list_places dd p:hover {
+        font-weight: 500;
+    }
+    #popular_search .box_tab .box_items .item:hover {
+        opacity: 0.7;
+    }
+    #popular_search button:hover {
+        opacity: 0.9;
+    }
+
+    #can_do_soon .box_button a:hover,
+    #campaign .box_button a:hover {
+        text-decoration: underline;
+    }
+
+    #feature .box_button a:hover {
+        text-decoration: underline;
+    }
+
+    #header.menu_top .container_right p.btn_signin:hover {
+        background: #fff;
+        color: #000;
+    }
+
+
+    #rental_coat .book_info .popup .picks .item li:hover {
+        background: #ddd;
+    }
+    #rental_coat .book_info .detail .content ul li:nth-child(2):hover,
+    #rental_coat .book_info .detail .content ul li:nth-child(3):hover {
+        background: #ddd;
+        cursor: pointer;
+    }
+    #can_do_soon .post:hover img , #campaign .post:hover img {
+        opacity: 0.8;
+    }
+    #feature .post:hover img {
+        opacity: 0.8;
+    }
+    #form_search_header ul li:hover {
+        color: #999;
+    }
+    .btn_signin:hover {
+        background: #fff;
+    }
+    .btn_letter:hover {
+        background: #666;
+    }
+    .btn_insert_map:hover {
+        background: #fff;
+    }
+    .button_hamburger:hover {
+        background: #fff;
+    }
+    .button_hamburger:hover span {
+        background: #333;
+    }
+    #page-search-list #to_map .button a:hover {
+        background: #333;
+    }
+    .btn_01 a:hover {
+        background: #dedede;
+    }
+    #rental_coat .surface li:hover {
+        opacity: 0.8;
+    }
+    #lession .content .post:hover {
+        background: #f1f2f3;
+    }
 }
 
 @media screen and (min-width: 769px) {}
@@ -68,6 +166,9 @@
         -webkit-transition: all 300ms ease;
         transition: all 300ms ease;
     }
+    .content_lession #menu-toggle .bar {
+        background: #53d2cd;
+    }
     #menu-toggle .bar:nth-child(1) {
         left: 5px;
         top: 7px;
@@ -86,6 +187,9 @@
         background: #feda31;
         -webkit-transition: all 300ms ease;
         transition: all 300ms ease;
+    }
+    .content_lession #menu-toggle .bar:nth-child(2):after {
+        background: #53d2cd;
     }
     #menu-toggle .bar:nth-child(3) {
         right: 5px;
@@ -111,16 +215,16 @@
         width: calc(100% - 45px);
         height: 45px;
     }
-    #form_header {
+    #form_search_header {
         width: calc(100% - 25px);
         justify-content: flex-end;
         padding: 0;
         box-sizing: border-box;
     }
-    #form_header ul li {
+    #form_search_header ul li {
         margin: 0 5px;
     }
-    #form_header input {
+    #form_search_header input {
         max-width: 60%;
         height: 40px;
         margin-left: 5px;
@@ -132,7 +236,6 @@
     #page-facility #content_right {
         width: 35%;
     }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -230,10 +333,7 @@
     #page-facility #top_info ul {
         height: 300px;
     }
-    #page-search-court-map #map .controls {
-        left: 10px;
-    }
-    #page-search-court-map #map .button_01 {
+    #page-search-map #map .button_01 {
         left: 10px;
     }
     #popular_search .box_tab {
@@ -266,6 +366,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
     }
+    #page-search-map #map .list_option_search {
+        left: 5px;
+    }
 }
 
 @media screen and (max-width: 560px) {
@@ -296,6 +399,9 @@
     .breadcrumbs ul li {
         font-size: 12px;
     }
+    #rental_coat .book_info .popup .content_popup .inner_content {
+        padding: 0 10px 0 0;
+    }
 }
 
 @media screen and (max-width: 490px) {
@@ -304,6 +410,13 @@
     }
     #form_topinfo .button_01 {
         margin-right: 10px;
+    }
+    .list_option_search .box_more .more_option {
+        left: inherit;
+        right: 0;
+    }
+    .list_option_search .box_surface > li > .surface_option li label {
+        border: solid 1px #cccccc;
     }
 }
 
@@ -337,11 +450,11 @@
     #lession .content {
         width: calc(100% - 30px);
     }
-    #form_header ul li {
+    #form_search_header ul li {
         font-size: 10px;
         margin: 0 3px;
     }
-    #form_header input {
+    #form_search_header input {
         font-size: 10px;
         padding-left: 5px;
         padding-right: 5px;
@@ -354,7 +467,7 @@
     #f_block01 .container_right ul a {
         font-size: 12px;
     }
-    #page-search-court-list #posts_container .post .info_02 .details ul .ttl {
+    #page-search-list #posts_container .post .info_02 .details ul .ttl {
         font-size: 12px;
     }
     #request_setting .content {
@@ -366,7 +479,7 @@
 }
 
 @media screen and (max-width: 360px) {
-    #rental_coat .types li {
+    #rental_coat .surface li {
         font-size: 10px;
     }
     #popular_search .box_tab .list_places dd p {

@@ -13,17 +13,15 @@
     <link href="./css/font-awesome.css" rel="stylesheet" type="text/css" />
     <link href="./css/slick.css" rel="stylesheet" type="text/css" />
     <link href="./css/slick-theme.css" rel="stylesheet" type="text/css" />
+    <link href="./css/nouislider.css" rel="stylesheet" type="text/css" />
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
     <link href="./css/responsive.css" rel="stylesheet" type="text/css" />
     <script src="./js/jquery.js" type="text/javascript"></script>
-    <script src="./js/slick.js" type="text/javascript"></script>
-    <script src="./js/jquery.scroll.js" type="text/javascript"></script>
-    <script src="./js/common.js" type="text/javascript"></script>
     <!-- Google Analytics start -->
     <!-- Google Analytics end -->
 </head>
 
-<body id="page-search-court-list">
+<body id="page-search-list" data-is-page="court">
     <div id="wrapper">
         <div id="header" class="clearfix">
             <div class="inner clearfix">
@@ -33,16 +31,13 @@
                           <span class="line_01"></span>
                           <span class="line_02"></span>
                         </a>
-                        <a href="#" class="logo_img">
-                            <img src="images/logo_52x31.png" width="52" alt="">
-                        </a>
                     </h1>
-                    <form action="#" id="form_header">
+                    <form action="#" id="form_search_header">
                         <ul>
-                            <li class="active">コート</li>
-                            <li>レッスン</li>
+                            <li id="for_court">コート</li>
+                            <li id="for_lession">レッスン</li>
                         </ul>
-                        <input type="text" placeholder="コート または レッスンを選択">
+                        <input id="input_search" type="text" placeholder="コート または レッスンを選択" data-for-court="レンタルコートを探す（例. 渋谷、横浜駅）" data-for-lession="レンタルレッスンを探す（例. 渋谷、横浜駅）">
                     </form>
                 </div>
                 <!-- end .container_left -->
@@ -69,22 +64,86 @@
         <div id="main" class="clearfix">
             <div id="content" class="clearfix">
                 <div class="inner clearfix">
-                    <div class="controls">
-                        <ul>
-                            <li>予算</li>
+                    <div class="list_option_search">
+                        <ul class="box_budget">
+                            <li>
+                                <span>予算</span>
+                                <ul class="drag_budget">
+                                    <li class="title">1時間料金</li>
+                                    <li class="content" id="drag_input"></li>
+                                </ul>
+                            </li>
                         </ul>
-                        <ul>
-                            <li>サーフェス</li>
+                        <ul class="box_surface">
+                            <li>
+                                <span>サーフェス</span>
+                                <ul class="surface_option">
+                                    <li>
+                                        <input type="checkbox" id="surface_01">
+                                        <label for="surface_01">ハード</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="surface_02">
+                                        <label for="surface_02">オムニ</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="surface_03">
+                                        <label for="surface_03">クレイ</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="surface_04">
+                                        <label for="surface_04">カーペット</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="surface_05">
+                                        <label for="surface_05">グラス</label>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
-                        <ul>
-                            <li>こだわり</li>
+                        <ul class="box_more">
+                            <li>
+                                <span>こだわり</span>
+                                <ul class="more_option">
+                                    <li>
+                                        <input type="checkbox" id="more_01">
+                                        <label for="more_01">駅近</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="more_02">
+                                        <label for="more_02">無料駐車場</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="more_03">
+                                        <label for="more_03">インドアコート</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="more_04">
+                                        <label for="more_04">アウトドアコート</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="more_05">
+                                        <label for="more_05">キッズルーム</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="more_06">
+                                        <label for="more_06">無料レンタルラケット</label>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
-                        <ul>
-                            <li class="active">平日</li>
-                            <li>土日祝</li>
+                        <ul class="box_search_days">
+                            <li>
+                                <input id="search_days_01" type="radio" name="search_days" value="0" checked>
+                                <label for="search_days_01">平日</label>
+                            </li>
+                            <li>
+                                <input id="search_days_02" type="radio" name="search_days" value="1">
+                                <label for="search_days_02">土日祝</label>
+                            </li>
                         </ul>
                     </div>
-                    <!-- end .controls -->
+                    <!-- end .list_option_search -->
                     <div id="posts_container" class="clearfix">
                         <div class="post has_ads">
                             <p class="ttl_01">多摩テニスパシフィッククラブ</p>
@@ -92,8 +151,13 @@
                             <ul class="row_01 clearfix">
                                 <li class="price">¥4,320~ <span>/時間</span></li>
                                 <li class="buttons">
-                                    <span class="star"><img src="images/icon_star02_60x57.png" width="30" alt=""></span>
-                                    <span class="mail"><img src="images/icon_mail01_102x65.png" width="51" alt=""></span>
+                                    <p class="btn_star"><i class="fa fa-star-o" aria-hidden="true"></i></p>
+                                    <p class="btn_letter">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span class="line_01"></span>
+                                        <span class="line_02"></span>
+                                        <span class="line_03"></span>
+                                    </p>
                                 </li>
                             </ul>
                             <ul class="info_01">
@@ -104,12 +168,10 @@
                                 <li><span class="icon"><img src="images/facility_icon05_30x15.png" width="30" alt=""></span>有</li>
                             </ul>
                             <div class="thumbs">
-                                <div class="btn_prev"></div>
                                 <ul class="images">
-                                    <li><img src="images/court_list_img01.png" alt=""></li>
-                                    <li><img src="images/court_list_img02.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
                                 </ul>
-                                <div class="btn_next"></div>
                             </div>
                             <div class="info_02">
                                 <ul class="icons">
@@ -164,8 +226,13 @@
                             <ul class="row_01 clearfix">
                                 <li class="price">¥4,320~ <span>/時間</span></li>
                                 <li class="buttons">
-                                    <span class="star"><img src="images/icon_star02_60x57.png" width="30" alt=""></span>
-                                    <span class="mail"><img src="images/icon_mail01_102x65.png" width="51" alt=""></span>
+                                    <p class="btn_star"><i class="fa fa-star-o" aria-hidden="true"></i></p>
+                                    <p class="btn_letter">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span class="line_01"></span>
+                                        <span class="line_02"></span>
+                                        <span class="line_03"></span>
+                                    </p>
                                 </li>
                             </ul>
                             <ul class="info_01">
@@ -176,12 +243,10 @@
                                 <li><span class="icon"><img src="images/facility_icon05_30x15.png" width="30" alt=""></span>有</li>
                             </ul>
                             <div class="thumbs">
-                                <div class="btn_prev"></div>
                                 <ul class="images">
-                                    <li><img src="images/court_list_img01.png" alt=""></li>
-                                    <li><img src="images/court_list_img02.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
                                 </ul>
-                                <div class="btn_next"></div>
                             </div>
                             <div class="info_02">
                                 <ul class="icons">
@@ -235,8 +300,13 @@
                             <ul class="row_01 clearfix">
                                 <li class="price">¥4,320~ <span>/時間</span></li>
                                 <li class="buttons">
-                                    <span class="star"><img src="images/icon_star02_60x57.png" width="30" alt=""></span>
-                                    <span class="mail"><img src="images/icon_mail01_102x65.png" width="51" alt=""></span>
+                                    <p class="btn_star"><i class="fa fa-star-o" aria-hidden="true"></i></p>
+                                    <p class="btn_letter">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span class="line_01"></span>
+                                        <span class="line_02"></span>
+                                        <span class="line_03"></span>
+                                    </p>
                                 </li>
                             </ul>
                             <ul class="info_01">
@@ -247,12 +317,10 @@
                                 <li><span class="icon"><img src="images/facility_icon05_30x15.png" width="30" alt=""></span>有</li>
                             </ul>
                             <div class="thumbs">
-                                <div class="btn_prev"></div>
                                 <ul class="images">
-                                    <li><img src="images/court_list_img01.png" alt=""></li>
-                                    <li><img src="images/court_list_img02.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
                                 </ul>
-                                <div class="btn_next"></div>
                             </div>
                             <div class="info_02">
                                 <ul class="icons">
@@ -306,8 +374,13 @@
                             <ul class="row_01 clearfix">
                                 <li class="price">¥4,320~ <span>/時間</span></li>
                                 <li class="buttons">
-                                    <span class="star"><img src="images/icon_star02_60x57.png" width="30" alt=""></span>
-                                    <span class="mail"><img src="images/icon_mail01_102x65.png" width="51" alt=""></span>
+                                    <p class="btn_star"><i class="fa fa-star-o" aria-hidden="true"></i></p>
+                                    <p class="btn_letter">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span class="line_01"></span>
+                                        <span class="line_02"></span>
+                                        <span class="line_03"></span>
+                                    </p>
                                 </li>
                             </ul>
                             <ul class="info_01">
@@ -318,12 +391,10 @@
                                 <li><span class="icon"><img src="images/facility_icon05_30x15.png" width="30" alt=""></span>有</li>
                             </ul>
                             <div class="thumbs">
-                                <div class="btn_prev"></div>
                                 <ul class="images">
-                                    <li><img src="images/court_list_img01.png" alt=""></li>
-                                    <li><img src="images/court_list_img02.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
                                 </ul>
-                                <div class="btn_next"></div>
                             </div>
                             <div class="info_02">
                                 <ul class="icons">
@@ -377,8 +448,13 @@
                             <ul class="row_01 clearfix">
                                 <li class="price">¥4,320~ <span>/時間</span></li>
                                 <li class="buttons">
-                                    <span class="star"><img src="images/icon_star02_60x57.png" width="30" alt=""></span>
-                                    <span class="mail"><img src="images/icon_mail01_102x65.png" width="51" alt=""></span>
+                                    <p class="btn_star"><i class="fa fa-star-o" aria-hidden="true"></i></p>
+                                    <p class="btn_letter">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span class="line_01"></span>
+                                        <span class="line_02"></span>
+                                        <span class="line_03"></span>
+                                    </p>
                                 </li>
                             </ul>
                             <ul class="info_01">
@@ -389,12 +465,10 @@
                                 <li><span class="icon"><img src="images/facility_icon05_30x15.png" width="30" alt=""></span>有</li>
                             </ul>
                             <div class="thumbs">
-                                <div class="btn_prev"></div>
                                 <ul class="images">
-                                    <li><img src="images/court_list_img01.png" alt=""></li>
-                                    <li><img src="images/court_list_img02.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
                                 </ul>
-                                <div class="btn_next"></div>
                             </div>
                             <div class="info_02">
                                 <ul class="icons">
@@ -448,8 +522,13 @@
                             <ul class="row_01 clearfix">
                                 <li class="price">¥4,320~ <span>/時間</span></li>
                                 <li class="buttons">
-                                    <span class="star"><img src="images/icon_star02_60x57.png" width="30" alt=""></span>
-                                    <span class="mail"><img src="images/icon_mail01_102x65.png" width="51" alt=""></span>
+                                    <p class="btn_star"><i class="fa fa-star-o" aria-hidden="true"></i></p>
+                                    <p class="btn_letter">
+                                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                                        <span class="line_01"></span>
+                                        <span class="line_02"></span>
+                                        <span class="line_03"></span>
+                                    </p>
                                 </li>
                             </ul>
                             <ul class="info_01">
@@ -460,225 +539,10 @@
                                 <li><span class="icon"><img src="images/facility_icon05_30x15.png" width="30" alt=""></span>有</li>
                             </ul>
                             <div class="thumbs">
-                                <div class="btn_prev"></div>
                                 <ul class="images">
-                                    <li><img src="images/court_list_img01.png" alt=""></li>
-                                    <li><img src="images/court_list_img02.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
+                                    <li><img src="images/court_item_img01.png" alt=""></li>
                                 </ul>
-                                <div class="btn_next"></div>
-                            </div>
-                            <div class="info_02">
-                                <ul class="icons">
-                                    <li><img src="images/icon_day01.png" alt=""></li>
-                                    <li><img src="images/icon_night01.png" alt=""></li>
-                                </ul>
-                                <div class="details">
-                                    <ul>
-                                        <li class="ttl">月</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">火</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">水</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">木</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">金</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">土</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">日・祝</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="txt_01">コート面数14面で広さが好評！駅から徒歩3分でここは50文字までが限界のキャッチコピースペースです。</p>
-                        </div>
-                        <!-- end .post -->
-                        <div class="post">
-                            <p class="ttl_01">多摩テニスパシフィッククラブ</p>
-                            <p class="sub_ttl_01">田園都市線 二子玉川駅5分</p>
-                            <ul class="row_01 clearfix">
-                                <li class="price">¥4,320~ <span>/時間</span></li>
-                                <li class="buttons">
-                                    <span class="star"><img src="images/icon_star02_60x57.png" width="30" alt=""></span>
-                                    <span class="mail"><img src="images/icon_mail01_102x65.png" width="51" alt=""></span>
-                                </li>
-                            </ul>
-                            <ul class="info_01">
-                                <li><span class="icon"><img src="images/facility_icon01_18x30.png" width="9" alt=""></span>5分</li>
-                                <li><span class="icon"><img src="images/facility_icon02_30x30.png" width="15" alt=""></span>5台</li>
-                                <li><span class="icon"><img src="images/facility_icon03_24x30.png" width="12" alt=""></span>有</li>
-                                <li><span class="icon"><img src="images/facility_icon04_15x15.png" width="15" alt=""></span>水</li>
-                                <li><span class="icon"><img src="images/facility_icon05_30x15.png" width="30" alt=""></span>有</li>
-                            </ul>
-                            <div class="thumbs">
-                                <div class="btn_prev"></div>
-                                <ul class="images">
-                                    <li><img src="images/court_list_img01.png" alt=""></li>
-                                    <li><img src="images/court_list_img02.png" alt=""></li>
-                                </ul>
-                                <div class="btn_next"></div>
-                            </div>
-                            <div class="info_02">
-                                <ul class="icons">
-                                    <li><img src="images/icon_day01.png" alt=""></li>
-                                    <li><img src="images/icon_night01.png" alt=""></li>
-                                </ul>
-                                <div class="details">
-                                    <ul>
-                                        <li class="ttl">月</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">火</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">水</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">木</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">金</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">土</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">日・祝</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="txt_01">コート面数14面で広さが好評！駅から徒歩3分でここは50文字までが限界のキャッチコピースペースです。</p>
-                        </div>
-                        <!-- end .post -->
-                        <div class="post">
-                            <p class="ttl_01">多摩テニスパシフィッククラブ</p>
-                            <p class="sub_ttl_01">田園都市線 二子玉川駅5分</p>
-                            <ul class="row_01 clearfix">
-                                <li class="price">¥4,320~ <span>/時間</span></li>
-                                <li class="buttons">
-                                    <span class="star"><img src="images/icon_star02_60x57.png" width="30" alt=""></span>
-                                    <span class="mail"><img src="images/icon_mail01_102x65.png" width="51" alt=""></span>
-                                </li>
-                            </ul>
-                            <ul class="info_01">
-                                <li><span class="icon"><img src="images/facility_icon01_18x30.png" width="9" alt=""></span>5分</li>
-                                <li><span class="icon"><img src="images/facility_icon02_30x30.png" width="15" alt=""></span>5台</li>
-                                <li><span class="icon"><img src="images/facility_icon03_24x30.png" width="12" alt=""></span>有</li>
-                                <li><span class="icon"><img src="images/facility_icon04_15x15.png" width="15" alt=""></span>水</li>
-                                <li><span class="icon"><img src="images/facility_icon05_30x15.png" width="30" alt=""></span>有</li>
-                            </ul>
-                            <div class="thumbs">
-                                <div class="btn_prev"></div>
-                                <ul class="images">
-                                    <li><img src="images/court_list_img01.png" alt=""></li>
-                                    <li><img src="images/court_list_img02.png" alt=""></li>
-                                </ul>
-                                <div class="btn_next"></div>
-                            </div>
-                            <div class="info_02">
-                                <ul class="icons">
-                                    <li><img src="images/icon_day01.png" alt=""></li>
-                                    <li><img src="images/icon_night01.png" alt=""></li>
-                                </ul>
-                                <div class="details">
-                                    <ul>
-                                        <li class="ttl">月</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">火</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">水</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">木</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">金</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">土</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                    <ul>
-                                        <li class="ttl">日・祝</li>
-                                        <li>3,240</li>
-                                        <li>4,320</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <p class="txt_01">コート面数14面で広さが好評！駅から徒歩3分でここは50文字までが限界のキャッチコピースペースです。</p>
-                        </div>
-                        <!-- end .post -->
-                        <div class="post">
-                            <p class="ttl_01">多摩テニスパシフィッククラブ</p>
-                            <p class="sub_ttl_01">田園都市線 二子玉川駅5分</p>
-                            <ul class="row_01 clearfix">
-                                <li class="price">¥4,320~ <span>/時間</span></li>
-                                <li class="buttons">
-                                    <span class="star"><img src="images/icon_star02_60x57.png" width="30" alt=""></span>
-                                    <span class="mail"><img src="images/icon_mail01_102x65.png" width="51" alt=""></span>
-                                </li>
-                            </ul>
-                            <ul class="info_01">
-                                <li><span class="icon"><img src="images/facility_icon01_18x30.png" width="9" alt=""></span>5分</li>
-                                <li><span class="icon"><img src="images/facility_icon02_30x30.png" width="15" alt=""></span>5台</li>
-                                <li><span class="icon"><img src="images/facility_icon03_24x30.png" width="12" alt=""></span>有</li>
-                                <li><span class="icon"><img src="images/facility_icon04_15x15.png" width="15" alt=""></span>水</li>
-                                <li><span class="icon"><img src="images/facility_icon05_30x15.png" width="30" alt=""></span>有</li>
-                            </ul>
-                            <div class="thumbs">
-                                <div class="btn_prev"></div>
-                                <ul class="images">
-                                    <li><img src="images/court_list_img01.png" alt=""></li>
-                                    <li><img src="images/court_list_img02.png" alt=""></li>
-                                </ul>
-                                <div class="btn_next"></div>
                             </div>
                             <div class="info_02">
                                 <ul class="icons">
@@ -728,7 +592,7 @@
                         <!-- end .post -->
                     </div>
                     <div id="to_map" class="clearfix">
-                        <p class="button"><a href="search_court_map.html"><i class="fa fa-map-marker" aria-hidden="true"></i></a></p>
+                        <p class="button"><a href="search_map.html"><i class="fa fa-map-marker" aria-hidden="true"></i></a></p>
                     </div>
                 </div>
             </div>
@@ -782,6 +646,34 @@
     </div>
     <script type="text/javascript" src="./js/gmaps.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=ここにAPIキー&callback=gmaps.renderAll"></script>
+    <script src="./js/slick.js" type="text/javascript"></script>
+    <script src="./js/nouislider.js" type="text/javascript"></script>
+    <script src="./js/wNumb.js" type="text/javascript"></script>
+    <script src="./js/jquery.scroll.js" type="text/javascript"></script>
+    <script src="./js/common.js" type="text/javascript"></script>
+    <script>
+        var handlesSlider = document.getElementById('drag_input');
+
+        noUiSlider.create(handlesSlider, {
+            connect: true,
+            start: [ 1000, 10000 ],
+            tooltips: true,
+            format: wNumb({
+                decimals: 1,
+                thousand: '.',
+                prefix: '¥ ',
+                suffix: ''
+            }),
+            range: {
+                // Starting at 500, step the value by 500,
+                // until 4000 is reached. From there, step by 1000.
+                'min': [ 0 ],
+                '10%': [ 500, 500 ],
+                '50%': [ 4000, 1000 ],
+                'max': [ 10000 ]
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -18,13 +18,6 @@
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
     <link href="./css/responsive.css" rel="stylesheet" type="text/css" />
     <script src="./js/jquery.js" type="text/javascript"></script>
-    <script src="./js/slick.js" type="text/javascript"></script>
-    <script src="./js/lightgallery.js" type="text/javascript"></script>
-    <script src="./js/lg-thumbnail.js" type="text/javascript"></script>
-    <script src="./js/theia-sticky-sidebar.js" type="text/javascript"></script>
-    <script src="./js/jquery.mCustomScrollbar.min.js" type="text/javascript"></script>
-    <script src="./js/jquery.scroll.js" type="text/javascript"></script>
-    <script src="./js/common.js" type="text/javascript"></script>
     <!-- Google Analytics start -->
     <!-- Google Analytics end -->
 </head>
@@ -43,12 +36,12 @@
                             <img src="images/logo_52x31.png" width="52" alt="">
                         </a>
                     </h1>
-                    <form action="#" id="form_header">
+                    <form action="#" id="form_search_header">
                         <ul>
-                            <li class="active">コート</li>
-                            <li>レッスン</li>
+                            <li id="for_court">コート</li>
+                            <li id="for_lession">レッスン</li>
                         </ul>
-                        <input type="text" placeholder="コート または レッスンを選択">
+                        <input id="input_search" type="text" placeholder="コート または レッスンを選択" data-for-court="レンタルコートを探す（例. 渋谷、横浜駅）" data-for-lession="レンタルレッスンを探す（例. 渋谷、横浜駅）">
                     </form>
                 </div>
                 <!-- end .container_left -->
@@ -97,7 +90,7 @@
                             <!-- end .breadcrumbs -->
                             <div id="rental_coat">
                                 <h3>レンタルコート</h3>
-                                <ul class="types">
+                                <ul class="surface">
                                     <li>ハード</li>
                                     <li class="active">オムニ</li>
                                     <li class="active">クレイ</li>
@@ -184,199 +177,199 @@
                                                 <li><span>◯</span>¥10,000</li>
                                             </ul>
                                         </div>
-                                        <script type="text/javascript">
-                                            $(window).on("load",function(){
-                                                $("#rental_coat .book_info .detail").mCustomScrollbar({
-                                                    axis:"x",
-                                                    scrollbarPosition: "inside"
-                                                });
+                                    </div>
+                                    <script type="text/javascript">
+                                        $(window).on("load",function(){
+                                            $("#rental_coat .book_info .detail ").mCustomScrollbar({
+                                                axis:"x",
+                                                scrollbarPosition: "inside"
                                             });
-                                        </script>
-                                        <div class="popup">
-                                            <div class="content_popup">
-                                                <div class="btn_close"></div>
-                                                <div class="inner_content clearfix">
-                                                    <p class="ttl_01">11/1 (水) 10:00~18:00</p>
-                                                    <p class="txt_01">この時間帯のレンタルコート料金を表示しています。</p>
-                                                    <ul class="times">
-                                                        <li>9<span>:00</span></li>
-                                                        <li>10<span>:00</span></li>
-                                                        <li>11<span>:00</span></li>
-                                                        <li>12<span>:00</span></li>
-                                                        <li>13<span>:00</span></li>
-                                                        <li>14<span>:00</span></li>
-                                                        <li>15<span>:00</span></li>
-                                                        <li>16<span>:00</span></li>
-                                                        <li>17<span>:00</span></li>
-                                                        <li>18<span>:00</span></li>
-                                                        <li>19<span>:00</span></li>
-                                                        <li>20<span>:00</span></li>
-                                                        <li>21<span>:00</span></li>
-                                                        <li>22<span>:00</span></li>
-                                                        <li>23<span>:00</span></li>
+                                        });
+                                    </script>
+                                    <div class="popup">
+                                        <div class="content_popup">
+                                            <div class="btn_close"></div>
+                                            <div class="inner_content clearfix">
+                                                <p class="ttl_01">11/1 (水) 10:00~18:00</p>
+                                                <p class="txt_01">この時間帯のレンタルコート料金を表示しています。</p>
+                                                <ul class="times">
+                                                    <li>9<span>:00</span></li>
+                                                    <li>10<span>:00</span></li>
+                                                    <li>11<span>:00</span></li>
+                                                    <li>12<span>:00</span></li>
+                                                    <li>13<span>:00</span></li>
+                                                    <li>14<span>:00</span></li>
+                                                    <li>15<span>:00</span></li>
+                                                    <li>16<span>:00</span></li>
+                                                    <li>17<span>:00</span></li>
+                                                    <li>18<span>:00</span></li>
+                                                    <li>19<span>:00</span></li>
+                                                    <li>20<span>:00</span></li>
+                                                    <li>21<span>:00</span></li>
+                                                    <li>22<span>:00</span></li>
+                                                    <li>23<span>:00</span></li>
+                                                </ul>
+                                                <div class="picks">
+                                                    <ul class="title">
+                                                        <li>ハード
+                                                            <br>1</li>
+                                                        <li>ハード
+                                                            <br>2</li>
+                                                        <li>オムニ
+                                                            <br>1</li>
+                                                        <li>オムニ
+                                                            <br>2
+                                                            <br>(室内)</li>
+                                                        <li>カーペ
+                                                            <br>ット1
+                                                            <br>(室内)</li>
+                                                        <li>カーペ
+                                                            <br>ット2</li>
+                                                        <li>グラス
+                                                            <br>1</li>
+                                                        <li>グラス
+                                                            <br>2</li>
                                                     </ul>
-                                                    <div class="picks">
-                                                        <ul class="title">
-                                                            <li>ハード
-                                                                <br>1</li>
-                                                            <li>ハード
-                                                                <br>2</li>
-                                                            <li>オムニ
-                                                                <br>1</li>
-                                                            <li>オムニ
-                                                                <br>2
-                                                                <br>(室内)</li>
-                                                            <li>カーペ
-                                                                <br>ット1
-                                                                <br>(室内)</li>
-                                                            <li>カーペ
-                                                                <br>ット2</li>
-                                                            <li>グラス
-                                                                <br>1</li>
-                                                            <li>グラス
-                                                                <br>2</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                        <ul class="item">
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                            <li>¥ 12,000</li>
-                                                        </ul>
-                                                    </div>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
+                                                    <ul class="item">
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                        <li>¥ 12,000</li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
@@ -602,11 +595,18 @@
     </div>
     <script type="text/javascript" src="./js/gmaps.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3KMv5AsjLFfgSPpGc8bUK23Ccx8ohdRY&callback=gmaps.renderAll"></script>
+    <script src="./js/slick.js" type="text/javascript"></script>
+    <script src="./js/lightgallery.js" type="text/javascript"></script>
+    <script src="./js/lg-thumbnail.js" type="text/javascript"></script>
+    <script src="./js/theia-sticky-sidebar.js" type="text/javascript"></script>
+    <script src="./js/jquery.mCustomScrollbar.min.js" type="text/javascript"></script>
+    <script src="./js/jquery.scroll.js" type="text/javascript"></script>
+    <script src="./js/common.js" type="text/javascript"></script>
     <script type="text/javascript">
     $(document).ready(function() {
         $('#page-facility #content_right')
             .theiaStickySidebar({
-                additionalMarginTop: 52
+                additionalMarginTop: 60
             });
 
         $('#rental_coat .popup .picks .item li').click(function() { $(this).toggleClass('selected'); });

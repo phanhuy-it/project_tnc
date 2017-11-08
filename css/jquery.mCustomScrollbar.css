@@ -103,8 +103,6 @@ y-axis
 	.mCSB_scrollTools .mCSB_dragger{ /* the draggable element */
 		cursor: pointer;
 		width: 100%;
-		min-height: 70px !important; /* minimum dragger height */
-		height:70px !important;
 		z-index: 1;
 	}
 
@@ -181,8 +179,8 @@ x-axis
 
 	.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{
 		width: 100%;
-		height: 4px;
-		margin: 6px auto;
+		height: 10px;
+		margin: 2px auto;
 	}
 	
 	.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar, 
@@ -355,16 +353,16 @@ yx-axis
 	}
 
 	.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
-		background-color: #f6b00a;
+		background-color: #333;
 		
 	}
 
 	.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
-		background-color: #f6b00a;
+		background-color: #333;
 	}
 	.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
 	.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
-		background-color: #f6b00a;
+		background-color: #333;
 	}
 
 	.mCSB_scrollTools .mCSB_buttonUp,
