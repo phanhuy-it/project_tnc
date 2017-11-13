@@ -3,16 +3,19 @@ $(window).bind('load',function(){
 	"use strict";
 	$(function(){
 		$('a[href^="#"]').click(function(){
-			if ( $( $(this).attr('href') ).length ) {
-				var p = $( $(this).attr('href') ).offset();
-				if($(window).width() > 640){
-					$('html,body').animate({ scrollTop: p.top - 82 }, 400);
+			if($(this).parents('.ui-datepicker').length === 0) {
+				if ( ($($(this).attr('href') ).length) ) {
+					var p = $( $(this).attr('href') ).offset();
+					if($(window).width() > 640){
+						$('html,body').animate({ scrollTop: p.top - 82 }, 400);
+					}
+					else {
+						$('html,body').animate({ scrollTop: p.top - 58}, 400);
+					}
 				}
-				else {
-					$('html,body').animate({ scrollTop: p.top - 58}, 400);
-				}
+				return false;
 			}
-			return false;
+			
 		});
 	});
 });
@@ -34,17 +37,5 @@ $(window).bind('load',function(){
 
 });
 
-//totop
-$(document).ready(function() {
-	"use strict";
-     $("#toTop").hide();
-	$(window).scroll(function () {
-	 if ($(this).scrollTop() > 600) {
-	 $("#toTop").fadeIn();
-	 } else {
-	 $("#toTop").fadeOut();
-	 }
-	});
-});
 
 

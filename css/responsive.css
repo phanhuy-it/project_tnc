@@ -13,6 +13,7 @@
 
 
 
+
 /*responsive */
 
 @media screen and (min-width: 1025px) {
@@ -81,7 +82,8 @@
         background: #ddd;
         cursor: pointer;
     }
-    #can_do_soon .post:hover img , #campaign .post:hover img {
+    #can_do_soon .post:hover img,
+    #campaign .post:hover img {
         opacity: 0.8;
     }
     #feature .post:hover img {
@@ -117,9 +119,28 @@
     #lession .content .post:hover {
         background: #f1f2f3;
     }
+    .list_option_search ul.box_budget>li:hover .drag_budget {
+        display: block;
+    }
+    .list_option_search .box_surface:hover .surface_option {
+        display: flex;
+    }
+    .list_option_search .box_more>li:hover .more_option {
+        display: block;
+    }
+    #request_setting .content .list_01 li:hover {
+        opacity: 0.8;
+    }
+    .col_done:hover {
+        opacity: 0.8;
+    }
+    #request_setting .content .list_surface li:hover {
+        opacity: 0.8;
+    }
+    #request_setting .content .submit:hover {
+        opacity: 0.8;
+    }
 }
-
-@media screen and (min-width: 769px) {}
 
 @media screen and (max-width: 1024px) {
     #header {
@@ -415,8 +436,16 @@
         left: inherit;
         right: 0;
     }
-    .list_option_search .box_surface > li > .surface_option li label {
+    .list_option_search .box_surface>li>.surface_option li label {
         border: solid 1px #cccccc;
+    }
+    form#login .list_social_btn {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    form#login .list_social_btn li {
+        margin: 5px !important;
+        width: 160px;
     }
 }
 

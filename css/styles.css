@@ -154,11 +154,11 @@ body {
     text-align: left;
 }
 
-input[type="text"] {
+input {
     padding: 15px 10px;
     box-sizing: border-box;
     border: solid 1px #eeeeee;
-    background: #f9f9f9;
+    background: #fff;
     color: #999999;
     border-radius: 2px;
 }
@@ -203,6 +203,7 @@ input:focus {
     position: absolute;
     left: 0;
     top: 0;
+    transition: all 0.2s;
 }
 
 .logo_single .line_02 {
@@ -213,6 +214,7 @@ input:focus {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
+    transition: all 0.2s;
 }
 
 .btn_letter {
@@ -408,6 +410,7 @@ input:focus {
 #form_search_header input {
     width: 350px;
     margin-left: 20px;
+    background: #fff;
 }
 
 #header .container_right {
@@ -868,7 +871,6 @@ input:focus {
     margin-bottom: 0;
     width: 30%;
     text-align: right;
-    margin-top: 5px;
 }
 
 #can_do_soon .box_button a,
@@ -883,6 +885,7 @@ input:focus {
     margin: 0 10px;
     cursor: pointer;
     float: left;
+    outline: none !important;
 }
 
 #can_do_soon .post .post_img,
@@ -1006,7 +1009,6 @@ button.slick-disabled {
     margin-bottom: 0;
     width: 30%;
     text-align: right;
-    margin-top: 5px;
 }
 
 #feature .box_button a {
@@ -1020,6 +1022,41 @@ button.slick-disabled {
     margin: 0 10px;
     cursor: pointer;
     float: left;
+    outline: none !important;
+}
+
+#feature .post.new_post {
+    position: relative;
+    z-index: 1;
+}
+#feature .post.new_post:before {
+    content: "New";
+    font-family: "Lato-Regular", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    width: 50px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e11613;
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    top: 0;
+}
+#feature .post.new_post:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-bottom: solid 20px transparent;
+    border-left: solid 25px #e11613;
+    border-right: solid 25px #e11613;
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    top: 35px;
 }
 
 #feature .post .post_img {
@@ -1968,9 +2005,6 @@ button.slick-disabled {
     height: 130px;
     display: none;
 }
-.list_option_search ul.box_budget > li:hover .drag_budget {
-    display: block;
-}
 .list_option_search ul.box_budget .drag_budget .title {
     text-align: center;
     margin-bottom: 35px;
@@ -2054,9 +2088,7 @@ button.slick-disabled {
 .list_option_search > ul > li {
     position: relative;
     z-index: 1;
-}
-.list_option_search .box_more > li:hover .more_option {
-    display: block;
+    padding-bottom: 5px;
 }
 .list_option_search .box_more > li.active > span {
     background: #feda31;
@@ -2130,11 +2162,13 @@ button.slick-disabled {
     width: 400px;
     z-index: 10;
     margin: 0;
-    padding: 5px 0 0 0;
     box-sizing: border-box;
     display: none;
     flex-wrap: wrap;
     max-width: calc(100vw - 100px);
+}
+.list_option_search .box_surface > li > .surface_option.open {
+    display: flex;
 }
 .list_option_search .box_surface > li > .surface_option li label {
     font-size: 12px;
@@ -2146,9 +2180,6 @@ button.slick-disabled {
 .list_option_search .box_surface > li > .surface_option li input[type=checkbox]:checked ~ label {
     background: #333;
     color: #fff;
-}
-.list_option_search .box_surface:hover .surface_option {
-    display: flex;
 }
 .list_option_search .box_surface > li.active span {
     background: #feda31;
@@ -2549,11 +2580,65 @@ button.slick-disabled {
 #request_setting .content .pick_time {
     text-align: center;
     margin-bottom: 10px;
+    position: relative;
 }
-
+.popup_time {
+    display: none;
+    position: absolute;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #BCBCBC;
+    background: #fff;
+    top: calc(100% + 10px);
+    left: 50%;
+    z-index: 5;
+    transform: translateX(-50%);
+}
+.popup_time_inner {
+    position: relative;
+    padding: 10px 20px;
+}
+.popup_time_inner:before {
+    content: "";
+    width: 20px;
+    height: 11px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -11px;
+    background: url(../images/icon_arrow_top01.png) no-repeat;
+    background-size: 20px auto;
+    z-index: 5;
+}
+.popup_time select, .popup_time .icon_line02 {
+    float: left;
+    margin: 0 5px 0 0;
+    line-height: 32px;
+}
+.hasDatepicker {
+    margin-bottom: 15px;
+}
+.col_done {
+    background: #f6b009;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 30px;
+    width: 60px;
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1px;
+}
+.col_time01 span {
+    font-weight: bold;
+}
 #request_setting .content .pick_time p {
     font-size: 12px;
     margin-bottom: 3px;
+    position: relative;
+    z-index: 1;
 }
 
 #request_setting .content .pick_time input {
@@ -2563,6 +2648,22 @@ button.slick-disabled {
     border: solid 1px #dcdcdc;
     padding: 7px;
     box-sizing: border-box;
+    background: url('../images/icon_calendar01.png') right 10px center no-repeat;
+    background-size: 11px;
+    position: relative;
+    z-index: 1;
+    font-size: 11px;
+    color: #000;
+}
+.popup_time select, .popup_time .icon_line02 {
+    float: left;
+    margin: 0 5px 0 0;
+    line-height: 32px;
+}
+.popup_time select {
+    width: 80px;
+    text-align: center;
+    height: 32px;
 }
 
 #request_setting .content .pick_face {
@@ -2626,6 +2727,7 @@ button.slick-disabled {
     box-shadow: none;
     border: none;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
 .button_hamburger {
@@ -2692,6 +2794,7 @@ button.slick-disabled {
     display: block;
     opacity: 0;
     visibility: hidden;
+    transition: all 0.2s;
 }
 
 #popular_search #tab_lession {
@@ -2701,6 +2804,7 @@ button.slick-disabled {
     opacity: 0;
     visibility: hidden;
     width: 100%;
+    transition: all 0.2s;
 }
 
 #popular_search .tab_content.show {
@@ -3095,4 +3199,363 @@ button.slick-disabled {
 .court_item_small.item04 {
     left: 100px;
     top: 300px;
+}
+
+/* ========================================================================= */
+form.form_default {
+    padding: 40px 0;
+    box-sizing: border-box;
+}
+form.form_default .content_form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+form.form_default h3 {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+form.form_default .desc {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.btn_facebook {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+.btn_facebook a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #cccccc;
+    background: #305097;
+    color: #fff;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1;
+}
+.btn_facebook a .icon {
+    font-size: 20px;
+    margin-right: 5%;
+}
+form#login .txt_01 {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+form#login .txt_01 span {
+    margin: 0 auto 25px;
+    padding: 0 10px;
+    font-size: 14px;
+    line-height: 1;
+    background: #fff;
+}
+form#login .txt_01:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #cccccc;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+}
+
+.btn_line {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.btn_line a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: #00c300;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: "Lato-Regular", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+    font-weight: bold;
+    border-radius: 2px;
+}
+.btn_line a .icon {
+    margin-right: 5%;
+    line-height: 1;
+}
+
+
+.btn_twitter {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.btn_twitter a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: #00aced;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: "Lato-Regular", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+    font-weight: bold;
+    border-radius: 2px;
+}
+.btn_twitter a .icon {
+    margin-right: 5%;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.btn_yahoo {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.btn_yahoo a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: #ff0829;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-family: "Lato-Regular", "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+    font-weight: bold;
+    border-radius: 2px;
+}
+.btn_yahoo a .icon {
+    margin-right: 5%;
+    line-height: 1;
+}
+
+
+form#login .list_social_btn {
+    display: flex;
+    margin-bottom: 20px;
+}
+form#login .list_social_btn li {
+    margin: 0 10px 0 0;
+}
+form#login .list_social_btn li:nth-child(3n+3) {
+    margin-right: 0;
+}
+form#login .list_social_btn li.btn_line a {
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+form#login .list_social_btn li.btn_line a .icon {
+    margin-right: 20%;
+}
+form#login .list_social_btn li.btn_twitter a {
+    padding-right: 10%;
+    box-sizing: border-box;
+}
+form#login .list_social_btn li.btn_twitter a .icon {
+    margin-right: 20%;
+}
+.form_default input[type="text"],
+.form_default input[type="password"],
+.form_default input[type="email"] {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    border: solid 1px #cccccc;
+    border-radius: 2px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 12px;
+    background: transparent;
+}
+form#login #login_password {
+    margin-bottom: 15px;
+}
+.has_label {
+    display: block;
+}
+.has_label input {
+    display: none;
+}
+.has_label label {
+    font-size: 14px;
+    line-height: 1.6;
+    display: block;
+    font-weight: 400;
+    padding: 0 0 0 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+.has_label label:before {
+    content: ""; 
+    width: 20px;
+    height: 20px;
+    border: solid 1px #cccccc;
+    box-sizing: border-box;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.has_label label:after{
+    content: "";
+    width: 10px;
+    height: 5px;
+    border-left: solid 2px #333;
+    border-bottom: solid 2px #333;
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    transform: rotateZ(-45deg);
+    display: none;
+}
+.has_label input[type="checkbox"]:checked ~ label:after {
+    display: block;
+}
+.forgot_pw a {
+    color: #333;
+}
+form#login .about_password {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+form#login .about_password p {
+    margin: 5px 5px 5px 0;
+}
+form#login .about_password .remember_password {
+    margin-right: 40px;
+}
+input[type="submit"] {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f6b00a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 2px;
+    line-height: 1;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+form#login .txt_02 {
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+form#login .txt_02 a {
+    color: #42b3b8;
+    font-weight: bold;
+}
+
+form#forgot-password #email {
+    margin-bottom: 20px;
+}
+.btn_back {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+.btn_back:last-child {
+    margin-bottom: 0;
+}
+.btn_back a {
+    font-weight: bold;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #039aa0;
+}
+form#signup #retype_password {
+    margin-bottom: 20px;
+}
+form#signup .txt_01 {
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+form#signup .txt_01 a {
+    color: #42b3b8;
+    font-weight: bold;
+}
+
+.default-template #header {
+    border-bottom: solid 1px #f9f9f9;
+}
+.default-template #left_sidebar {
+    padding: 50px 0 0;
+    box-sizing: border-box;
+    background: #fff;
+    width: 250px;
+    float: left;
+}
+.default-template #content {
+    width: calc(100% - 250px);
+    float: right;
+    background: #f9f9f9;
+    padding: 50px 0 50px 100px;
+    box-sizing: border-box;
+}
+#left_sidebar ul {
+    margin-bottom: 30px;
+}
+#left_sidebar ul:last-child {
+    margin-bottom: 0;
+}
+#left_sidebar ul li {
+    margin-bottom: 25px;
+}
+#left_sidebar ul li:last-child {
+    margin-bottom: 0;
+}
+#left_sidebar ul li a {
+    font-size: 16px;
+    line-height: 1.6;
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 1px;
+}
+form.user_form h3 {
+    line-height: 1.4;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+form.user_form .desc {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+form.user_form .content_form {
+    margin-bottom: 35px;
+    max-width: 500px;
+}
+form.user_form .content_form:last-child {
+    margin-bottom: 0;
+}
+form.user_form .content_form input {
+    width: 100%;
 }
